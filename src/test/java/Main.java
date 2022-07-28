@@ -6,6 +6,13 @@ public class Main {
       loginTest.validLoginTest();
 
 
+      RegisterTest registerTest = new RegisterTest();
+      registerTest.validRegistertest();
+
+      WishListTest wishListTest = new WishListTest();
+      wishListTest.validWishlisttest();
+
+
     }
 
     public static void wait(int seconds) {
