@@ -27,18 +27,18 @@ public class ShoppingCartTest {
       @Test
     public void AddtocartItem() {
 
-          driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
-          driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+          driver.findElement(By.cssSelector(".skip-account .label")).click();
+          driver.findElement(By.cssSelector("[title='Log In']")).click();
           driver.findElement(By.id("email")).sendKeys("roxanatestare@gmail.com");
           driver.findElement(By.id("pass")).sendKeys("Testareplatforma!");
           driver.findElement(By.id("send2")).click();
-          driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-5.parent")).click();
-          driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col3-layout > div > div.col-wrapper > div.col-main > div.category-products > ul > li > div > div.actions > a")).click();
-          driver.findElement(By.cssSelector("#swatch27 > span.swatch-label > img")).click();
-          driver.findElement(By.cssSelector("#swatch77 > span.swatch-label")).click();
-          driver.findElement(By.cssSelector("#product_addtocart_form > div.product-shop > div.product-options-bottom > div.add-to-cart > div.add-to-cart-buttons > button")).click();
+          driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-5.parent >a ")).click();
+          driver.findElement(By.cssSelector(".actions .button")).click();
+          driver.findElement(By.id("option27")).click();
+          driver.findElement(By.id("option81")).click();
+          driver.findElement(By.cssSelector(".add-to-cart-buttons .button ")).click();
 
-          WebElement addedproductmessage = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col1-layout > div > div > div.cart.display-single-price > ul > li > ul > li > span"));
+          WebElement addedproductmessage = driver.findElement(By.cssSelector(".success-msg span"));
           Assert.assertTrue(((WebElement) addedproductmessage).isDisplayed());
           wait(10);
 
